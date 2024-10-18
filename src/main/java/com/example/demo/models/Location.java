@@ -1,11 +1,13 @@
 package com.example.demo.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 @Entity(name="locations")
 @Access(AccessType.FIELD)
 public class Location {
